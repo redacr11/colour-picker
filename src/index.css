@@ -82,6 +82,10 @@ input {
   border-bottom-left-radius: 0.25rem;
 }
 
+input:focus {
+  outline: none;
+}
+
 .btn {
   background: hsl(205, 78%, 60%);
   padding: 0.5rem 1rem;
@@ -136,6 +140,6 @@ input.error {
 
 .alert {
   text-transform: uppercase;
-  font-size: 0.85rem;
+  font-size: 0.5rem;
   margin-top: 0.5rem;
 }
