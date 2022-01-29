@@ -46,7 +46,7 @@ h4 {
 
 p {
   margin-bottom: 1.25rem;
-  color: hsl(210, 22%, 49%);
+  color: black;
 }
 
 .section {
@@ -134,7 +134,8 @@ input.error {
 }
 
 .colour-light .colour-value,
-.colour-light .percent-value {
+.colour-light .percent-value,
+.colour-light .copy-value {
   color: white;
 }
 

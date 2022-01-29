@@ -24,7 +24,11 @@ const SingleColour = ({ rgb, weight, index, hexColour }) => {
     >
       <p className="percent-value">{weight}</p>
       <p className="colour-value">{hexValue}</p>
-      {alert && <p className="alert">💯🎉 Copied to clipboard! 🎉💯</p>}
+      {alert && (
+        <p className={`alert ${index > 10 && "colour-light"} copy-value`}>
+          💯🎉 Copied to clipboard! 🎉💯
+        </p>
+      )}
     </div>
   );
 };

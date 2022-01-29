@@ -8,10 +8,12 @@ function App() {
   const [error, setError] = useState(false);
   const [list, setList] = useState(new Values("#00aa25").all(10));
 
+  let colours;
+
   const handleSubmit = (e) => {
     e.preventDefault();
     try {
-      let colours = new Values(colour).all(10);
+      colours = new Values(colour).all(10);
       setList(colours);
     } catch (error) {
       setError(true);
@@ -22,7 +24,7 @@ function App() {
   return (
     <>
       <div className="section container">
-        <h3>Colour Generator</h3>
+        <h3>Pick the Colour</h3>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -31,7 +33,11 @@ function App() {
             placeholder="#00aa25"
             className={`${error ? "error" : null}`}
           />
-          <button className="btn" type="submit">
+          <button
+            className="btn"
+            type="submit"
+            style={{ backgroundColor: `rgb(${list[10].rgb})` }}
+          >
             Submit
           </button>
         </form>
